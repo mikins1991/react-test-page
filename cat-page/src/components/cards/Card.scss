@@ -1,0 +1,70 @@
+@import '../../style/colors.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+.feedCards{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+@media (max-width: 1200px) {
+    .feedCards{
+      width: 720px;
+      &__item:nth-child(3n){
+        margin-top: 70px;
+      }
+    }
+  }
+  
+  @media (max-width: 719px) {
+    .feedCards{
+      width: 355px;
+      min-width: 355px;
+      &__item{
+        margin-top: 70px;
+        &:first-child{
+          margin: 0;
+        }
+      }
+    }
+  }
+
+.card-border{
+    cursor: pointer;
+    margin:14px;
+    position: relative;
+    width: 320px;
+    min-height: 488px;
+    background-color: $background-default-color;
+    border-radius: 14px;
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
+
+    &-disabled{
+        background: $background-disabled-color;
+        cursor: default;
+    }
+
+    &-active{
+        background: $background-selected-color
+    }
+}
+
+.card{
+    position: absolute;
+    top: 4px; 
+    left: 4px; 
+    width: 313px; 
+    height: 480px;
+    background-color: $background-color;
+    border-radius: 11px;
+    clip-path: polygon(14.7% 0, 100% 0, 100% 100%, 0 100%, 0 9.7%);
+
+    &-disabled{
+        background-color: $background-color;
+        opacity: 0.5;
+        cursor: default;
+    }
+}

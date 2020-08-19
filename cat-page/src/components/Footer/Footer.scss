@@ -1,0 +1,24 @@
+@import '../../style/colors.scss';
+
+.footer{
+    text-align: center;
+    color: $background-color;
+    font-family: 'Roboto Condensed';
+    font-size: 1rem;
+    pointer-events: none;
+
+    &-link{
+      color: $background-default-color;
+      border-bottom: 1px dashed $background-default-color;
+      text-decoration: none;
+      pointer-events: auto;
+
+      &:hover{
+        border: none;
+      }
+    }
+    
+    &-disabled{
+      color:$color-text;
+    }
+  }
